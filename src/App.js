@@ -1,16 +1,35 @@
+import { useState } from 'react';
 import { useRoutes } from 'react-router-dom';
+
 import './App.css';
+
 import Navbar from './Components/Navabr/Navbar';
 import routes from './routes';
-import Home from './Pages/Home/Home';
+import productsContext from './Contexts/productsContext';
+import unitsDatas from './Datas';
+import { anotherUnitsDatas } from './Datas';
 
 function App() {
   let router = useRoutes(routes)
+
+  const [units, setUnits] = useState(unitsDatas)
+  const [anotherUnits, setAnotherUnits] = useState(anotherUnitsDatas)
+  const [userCarts, setUserCarts] = useState([])
+  
   return (
-    <div className="App">
-      <Navbar/>
-      {router}
-    </div>
+    <productsContext.Provider value={{
+      units,
+      anotherUnits,
+      setAnotherUnits,
+      setUnits,
+      userCarts,
+      setUserCarts
+    }}>
+      <div className="App">
+        <Navbar />
+        {router}
+      </div>
+    </productsContext.Provider>
   );
 }
 
