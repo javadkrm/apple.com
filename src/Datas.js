@@ -6,10 +6,10 @@ let unitsDatas = [
 let anotherUnitsDatas = [
     { id: 1, title: 'iPad', img: 'images/ipad.jpg', desc: 'Now superCharged by the M3 chip', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'blueBg' },
     { id: 2, title: 'Watch series 11', img: 'images/watch.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 3, title: 'Watch series 11', img: 'images/ipads.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 4, title: 'Watch series 11', img: 'images/macbook.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 5, title: 'Watch series 11', img: 'images/customers.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 6, title: 'Watch series 11', img: 'images/cart.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 3, title: 'iPad', img: 'images/ipads.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 4, title: 'macBook Air', img: 'images/macbook.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 5, title: 'Trade In', img: 'images/customers.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 6, title: 'Card', img: 'images/cart.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
 ]
 
 let moviesDatas = [
