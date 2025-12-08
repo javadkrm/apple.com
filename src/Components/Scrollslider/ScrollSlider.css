@@ -1,0 +1,145 @@
+.sliderWrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  white-space: nowrap;
+  padding: 20px;
+  position: relative;
+}
+
+.sliderItem {
+  flex-shrink: 0;
+  width: 415px;
+  height: 235px;
+  position: relative;
+  /* border-radius: 20px; */
+  overflow: hidden;
+  transition: filter 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
+  filter: none;
+  transform: translateZ(0);
+}
+
+.sliderItem.blurred {
+  filter: blur(6px) brightness(0.6);
+  transform: scale(0.98);
+}
+
+.sliderImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transform: translateY(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.caption p {
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.watch-btn {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.18s ease;
+  padding: 10px 16px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: all 0.18s ease;
+  -moz-transition: all 0.18s ease;
+  -ms-transition: all 0.18s ease;
+  -o-transition: all 0.18s ease;
+}
+
+.sliderItem:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sliderItem:hover .watch-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.sliderItem:hover {
+  box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.28);
+  z-index: 5;
+  transform: translateY(-4px) scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .sliderWrapper {
+    gap: 14px;
+    padding: 12px;
+  }
+
+  .sliderItem {
+    width: 200px;
+    height: 240px;
+    border-radius: 14px;
+  }
+
+  .caption {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .watch-btn {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderWrapper {
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .sliderItem {
+    width: 160px;
+    height: 200px;
+    border-radius: 12px;
+  }
+
+
+  .sliderItem.blurred {
+    filter: blur(3px) brightness(0.75);
+    transform: scale(0.995);
+  }
+
+  .caption {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+
+  .watch-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  /* Make caption easier to tap: show on tap (touch handlers set hoveredIndex) */
+  .sliderItem .caption {
+    pointer-events: auto;
+  }
+}

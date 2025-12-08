@@ -48,7 +48,7 @@ export default function Caruser() {
                             <div className='carousel-caption'>
                                 <button className='btn btn-light rounded-pill py-2 px-3 border-1'>Stream now</button>
                                 <span className='text-light fs-6 fw-normal'>
-                                    <span className='movie-category text-light fs-4 fw-semibold'>{movie.category}</span>. {movie.desc}
+                                    <span className='movie-category text-light fs-4 fw-semibold'>{movie.category}</span> . {movie.desc}
                                 </span>
                             </div>
                         </Link>
@@ -64,7 +64,7 @@ export default function Caruser() {
                 {movies.map((_, index) => (
                     <button
                         key={index}
-                        className={`indicator ${index === activeIndex ? 'active' : ''}`}
+                        className={`bg-secondary indicator ${index === activeIndex ? 'active' : ''}`}
                         onClick={() => setActiveIndex(index)}
                     ></button>
                 ))}

@@ -20,9 +20,22 @@ let moviesDatas = [
     { id: 5, category: 'Comedy', activity: '', desc: 'the truth is the top story', img: 'images/morning.jpg' },
 ]
 
+let scrollSliderDatas = [
+    {id: 1, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
+    {id: 2, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
+    {id: 3, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
+    {id: 4, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
+    {id: 5, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
+    {id: 6, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
+    {id: 7, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
+    {id: 8, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
+    {id: 9, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
+    {id: 10, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
+]
+
 export default unitsDatas
 
-export { anotherUnitsDatas, moviesDatas }
+export { anotherUnitsDatas, moviesDatas, scrollSliderDatas }
 
 
 // {id: 1, title: 'Give Something Special', img: 'images/apple-logo.jpg', desc: 'Find what they have been waiting for all year', firstBtnText:'Shop gifts',},
