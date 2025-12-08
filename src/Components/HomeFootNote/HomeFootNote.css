@@ -1,0 +1,9 @@
+.HomeFootNoteContainer {
+    background-color: var(--main-white);
+}
+
+.notes-item-text {
+    font-size: 13px;
+    color: var(--footer-text);
+    line-height: 13px;
+}

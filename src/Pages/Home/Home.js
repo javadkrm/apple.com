@@ -3,6 +3,7 @@ import './Home.css'
 import Units from '../../Components/Units/Units'
 import Caruser from '../../Components/Caruser/Caruser'
 import ScrollSlider from '../../Components/Scrollslider/ScrollSlider'
+import HomeFootNote from '../../Components/HomeFootNote/HomeFootNote'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Units />
       <Caruser/>
       <ScrollSlider/>
+      <HomeFootNote/>
     </div>
   )
 }
