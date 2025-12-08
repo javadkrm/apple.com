@@ -8,6 +8,7 @@ import routes from './routes';
 import productsContext from './Contexts/productsContext';
 import unitsDatas from './Datas';
 import { anotherUnitsDatas, moviesDatas, scrollSliderDatas } from './Datas';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   let router = useRoutes(routes)
@@ -17,7 +18,7 @@ function App() {
   const [userCarts, setUserCarts] = useState([])
   const [movies, setMovies] = useState(moviesDatas)
   const [scrollDatas, setScrollDatas] = useState(scrollSliderDatas)
-  
+
   return (
     <productsContext.Provider value={{
       units,
@@ -34,6 +35,7 @@ function App() {
       <div className="App">
         <Navbar />
         {router}
+        <Footer />
       </div>
     </productsContext.Provider>
   );
