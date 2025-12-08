@@ -47,7 +47,7 @@ export default function Caruser() {
                             <img src={movie.img} alt={movie.category} />
                             <div className='carousel-caption'>
                                 <button className='btn btn-light rounded-pill py-2 px-3 border-1'>Stream now</button>
-                                <span className='text-light fs-5'>
+                                <span className='text-light fs-6 fw-normal'>
                                     <span className='movie-category text-light fs-4 fw-semibold'>{movie.category}</span>. {movie.desc}
                                 </span>
                             </div>
