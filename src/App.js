@@ -7,7 +7,7 @@ import Navbar from './Components/Navabr/Navbar';
 import routes from './routes';
 import productsContext from './Contexts/productsContext';
 import unitsDatas from './Datas';
-import { anotherUnitsDatas } from './Datas';
+import { anotherUnitsDatas, moviesDatas } from './Datas';
 
 function App() {
   let router = useRoutes(routes)
@@ -15,11 +15,14 @@ function App() {
   const [units, setUnits] = useState(unitsDatas)
   const [anotherUnits, setAnotherUnits] = useState(anotherUnitsDatas)
   const [userCarts, setUserCarts] = useState([])
+  const [movies, setMovies] = useState(moviesDatas)
   
   return (
     <productsContext.Provider value={{
       units,
       anotherUnits,
+      movies,
+      setMovies,
       setAnotherUnits,
       setUnits,
       userCarts,
