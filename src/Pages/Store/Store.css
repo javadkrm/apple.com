@@ -7,11 +7,20 @@
     padding-top: 50px;
 }
 
-.storeTitle {
+.storeTitle,
+.colorTitle {
     background-image: linear-gradient(to right, rgb(51, 122, 229) 0px, rgb(64, 143, 229) 34%, rgb(212, 115, 74) 71%, rgb(234, 107, 46) 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.storeTitle {
     font-size: 80px;
+
+}
+
+.productsCategory {
+    padding: 80px 0;
 }
 
 .categorImage {
@@ -26,6 +35,12 @@
 
 .categoryInfo {
     font-size: 14px;
+}
+
+/* cardsScroller */
+
+.cardsScrollerTitle {
+    color: var(--footer-text);
 }
 
 /* Responsive storeHeader only */
@@ -86,5 +101,23 @@
     .storeTitle {
         font-size: 48px;
     }
+}
+
+/* cardsScrollerContent */
+
+.cardsScrollerContainer {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.cardsScrollerContainer {
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cardsScrollerContainer::-webkit-scrollbar {
+    display: none;
 }
 

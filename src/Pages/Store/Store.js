@@ -4,18 +4,24 @@ import { Link } from 'react-router-dom'
 import OffBox from '../../Components/OffBox/OffBox'
 import { LuExternalLink } from "react-icons/lu";
 
+import CardsScroller from '../../Components/CardsScroller/CardsScroller';
+import ProductsCategory from '../../Components/productsCategory/ProductsCategory';
+
 import productsCategoryContext from '../../Contexts/productsCategoryContext';
-import { productsCategoryData } from '../../Datas';
+import { productsCategoryData, scrollCardDatas } from '../../Datas';
 
 
 export default function Store() {
 
   const [categories, setCategories] = useState(productsCategoryData)
+  const [scrollCards, setscrollCards] = useState(scrollCardDatas)
   return (
     <productsCategoryContext.Provider value={{
-      categories
+      categories,
+      setCategories,
+      scrollCards,
+      setscrollCards
     }}>
-
       <div className='storeWrapper'>
 
         <OffBox />
@@ -28,20 +34,21 @@ export default function Store() {
                 <Link className='mt-1 text-decoration-none d-flex align-items-center' to='/'>Find an Apple Store  <LuExternalLink className='ms-1' /></Link>
               </div>
             </div>
-            <div className='productsCategory  py-5'>
+            <div className='productsCategory'>
               <div className='categoriesContainer d-flex align-items-center justify-content-between'>
-                {categories.map(category => (
-                  <Link className='text-decoration-none' to={`/shop/${category.id}`}>
-                    <div className='categoryItem'>
-                        <div className='categorImage'>
-                          <img src={category.img}/>
-                        </div>
-                        <div className='categoryInfo mt-2 text-dark fw-medium'>
-                          {category.category}
-                        </div>
-                    </div>
-                  </Link>
-                ))}
+                <ProductsCategory/>
+              </div>
+            </div>
+            <div className='cardsScroller'>
+              <div className='cardsScrollerHeader pb-4 text-start'>
+                <h3 className='cardsScrollerTitle m-0'>
+                  <span className='colorTitle'>The latest.</span> Truly awe-inspired gifts.
+                </h3>
+              </div>
+              <div className='cardsScrollerContent'>
+                <div className='cardsScrollerContainer py-4 d-flex align-items-center'>
+                  <CardsScroller/>
+                </div>
               </div>
             </div>
           </div>

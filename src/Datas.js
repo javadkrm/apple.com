@@ -21,32 +21,41 @@ let moviesDatas = [
 ]
 
 let scrollSliderDatas = [
-    {id: 1, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
-    {id: 2, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
-    {id: 3, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
-    {id: 4, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
-    {id: 5, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
-    {id: 6, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
-    {id: 7, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
-    {id: 8, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
-    {id: 9, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
-    {id: 10, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
+    { id: 1, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
+    { id: 2, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
+    { id: 3, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
+    { id: 4, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
+    { id: 5, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
+    { id: 6, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
+    { id: 7, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
+    { id: 8, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
+    { id: 9, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
+    { id: 10, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
 ]
 
 let productsCategoryData = [
-    {id: 1, category: 'Mac', img: 'images/store-card-mac.png'},
-    {id: 2, category: 'iPhone', img: 'images/store-card-iphone.png'},
-    {id: 3, category: 'iPad', img: 'images/store-card-ipad.png'},
-    {id: 4, category: 'Apple Watch', img: 'images/store-card-watch.png'},
-    {id: 5, category: 'Apple Vision Pro', img: 'images/store-card-vision.png'},
-    {id: 6, category: 'Airpods', img: 'images/store-card-airpod.png'},
-    {id: 7, category: 'AirTag', img: 'images/store-card-airtag.png'},
-    {id: 8, category: 'Apple TV 4K', img: 'images/store-card-tv.png'},
+    { id: 1, category: 'Mac', img: 'images/store-card-mac.png' },
+    { id: 2, category: 'iPhone', img: 'images/store-card-iphone.png' },
+    { id: 3, category: 'iPad', img: 'images/store-card-ipad.png' },
+    { id: 4, category: 'Apple Watch', img: 'images/store-card-watch.png' },
+    { id: 5, category: 'Apple Vision Pro', img: 'images/store-card-vision.png' },
+    { id: 6, category: 'Airpods', img: 'images/store-card-airpod.png' },
+    { id: 7, category: 'AirTag', img: 'images/store-card-airtag.png' },
+    { id: 8, category: 'Apple TV 4K', img: 'images/store-card-tv.png' },
+]
+
+let scrollCardDatas = [
+    { id: 1, title: 'iPhone 17 pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/iphone17pro.jpg' },
+    { id: 2, title: 'MacBook Pro 14 with M5', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/mac.jpg' },
+    { id: 3, title: 'iPad Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/ipadpro.jpg' },
+    { id: 4, title: 'Apple Watch series 11', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/watch11.jpg' },
+    { id: 5, title: 'iPhone Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/iphoneair.jpg' },
+    { id: 6, title: 'MacBook Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/macair.jpg' },
 ]
 
 export default unitsDatas
 
-export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData }
+export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas }
 
 
 // {id: 1, title: 'Give Something Special', img: 'images/apple-logo.jpg', desc: 'Find what they have been waiting for all year', firstBtnText:'Shop gifts',},

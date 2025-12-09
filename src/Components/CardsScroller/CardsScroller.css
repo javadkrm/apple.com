@@ -1,0 +1,128 @@
+
+.cardLink {
+  text-decoration: none;
+}
+
+
+.appleCard {
+  width: 420px;
+  height: 520px;
+  background: #fff;
+  border-radius: 28px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  flex-shrink: 0;
+  transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+}
+
+.appleCard:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+}
+
+.appleCardContent {
+  position: relative;
+  z-index: 3;
+}
+
+.appleCardTitle {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+  color: #111;
+}
+
+.appleCardBadge {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #0071e3, #c043ff, #ff8400);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.appleCardPrice {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #444;
+}
+
+.appleCardImage {
+  width: 90%;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.appleCardImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+}
+
+
+@media (max-width: 600px) {
+  .appleCard {
+    width: 330px;
+    height: 420px;
+    padding: 28px;
+  }
+
+  .appleCardTitle {
+    font-size: 24px;
+  }
+
+  .appleCardBadge {
+    font-size: 14px;
+  }
+
+  .appleCardPrice {
+    font-size: 14px;
+  }
+
+  .appleCardImage {
+    width: 80%;
+    bottom: -25px;
+  }
+}
+
+/* موبایل کوچک (عرض < 430px) ---------------------------------- */
+@media (max-width: 430px) {
+  .appleCard {
+    width: 260px;
+    height: 360px;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .appleCardTitle {
+    font-size: 20px;
+  }
+
+  .appleCardBadge {
+    font-size: 12px;
+  }
+
+  .appleCardPrice {
+    font-size: 12px;
+  }
+
+  .appleCardImage {
+    width: 82%;
+    bottom: -20px;
+  }
+}
