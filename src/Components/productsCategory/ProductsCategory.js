@@ -1,15 +1,15 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import './ProductsCategory.css'
-import productsCategoryContext from '../../Contexts/productsCategoryContext'
+import productsContext from '../../Contexts/productsContext'
 
 export default function ProductsCategory() {
 
-    const { categories } = useContext(productsCategoryContext)
+    const { categoryDatas } = useContext(productsContext)
     return (
         <>
-            {categories.map(category => (
-                <Link className='text-decoration-none' to={`/shop/${category.id}`}>
+            {categoryDatas.map(category => (
+                <Link key={category.id} className='text-decoration-none' to={`/shop/${category.id}`}>
                     <div className='categoryItem'>
                         <div className='categorImage'>
                             <img src={category.img} />

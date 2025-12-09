@@ -7,21 +7,10 @@ import { LuExternalLink } from "react-icons/lu";
 import CardsScroller from '../../Components/CardsScroller/CardsScroller';
 import ProductsCategory from '../../Components/productsCategory/ProductsCategory';
 
-import productsCategoryContext from '../../Contexts/productsCategoryContext';
-import { productsCategoryData, scrollCardDatas } from '../../Datas';
-
 
 export default function Store() {
 
-  const [categories, setCategories] = useState(productsCategoryData)
-  const [scrollCards, setscrollCards] = useState(scrollCardDatas)
   return (
-    <productsCategoryContext.Provider value={{
-      categories,
-      setCategories,
-      scrollCards,
-      setscrollCards
-    }}>
       <div className='storeWrapper'>
 
         <OffBox />
@@ -46,7 +35,7 @@ export default function Store() {
                 </h3>
               </div>
               <div className='cardsScrollerContent'>
-                <div className='cardsScrollerContainer py-4 d-flex align-items-center'>
+                <div className='cardsScrollerContainer py-5 d-flex align-items-center'>
                   <CardsScroller/>
                 </div>
               </div>
@@ -54,6 +43,5 @@ export default function Store() {
           </div>
         </div>
       </div>
-    </productsCategoryContext.Provider>
   )
 }

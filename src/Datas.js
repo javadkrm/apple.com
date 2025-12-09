@@ -46,7 +46,7 @@ let productsCategoryData = [
 
 let scrollCardDatas = [
     { id: 1, title: 'iPhone 17 pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/iphone17pro.jpg' },
-    { id: 2, title: 'MacBook Pro 14 with M5', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/mac.jpg' },
+    { id: 2, title: 'MacBook Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/mac.jpg' },
     { id: 3, title: 'iPad Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/ipadpro.jpg' },
     { id: 4, title: 'Apple Watch series 11', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/watch11.jpg' },
     { id: 5, title: 'iPhone Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/iphoneair.jpg' },

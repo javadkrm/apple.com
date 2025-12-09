@@ -6,9 +6,9 @@ export default function Footer() {
         <div className='footerContainer'>
             <hr className='m-0 footer-hr mx-auto' />
             <div className='container'>
-                <footer class="apple-footer">
-                    <div class="footer-container">
-                        <div class="footer-column">
+                <footer className="apple-footer">
+                    <div className="footer-container">
+                        <div className="footer-column">
                             <h4 className='mt-4 mb-2'>Shop and Learn</h4>
                             <a href="#">Store</a>
                             <a href="#">Mac</a>
@@ -29,7 +29,7 @@ export default function Footer() {
                             <a href="#">Apple Cash</a>
                         </div>
 
-                        <div class="footer-column">
+                        <div className="footer-column">
                             <h4 className='mt-4 mb-2'>Account</h4>
                             <a href="#">Manage Your Apple Account</a>
                             <a href="#">Apple Store Account</a>
@@ -47,7 +47,7 @@ export default function Footer() {
                             <a href="#">App Store</a>
                         </div>
 
-                        <div class="footer-column">
+                        <div className="footer-column">
                             <h4 className='mt-4 mb-2'>Apple Store</h4>
                             <a href="#">Find a Store</a>
                             <a href="#">Genius Bar</a>
@@ -62,7 +62,7 @@ export default function Footer() {
                             <a href="#">Shopping Help</a>
                         </div>
 
-                        <div class="footer-column">
+                        <div className="footer-column">
                             <h4 className='mt-4 mb-2'>For Business</h4>
                             <a href="#">Apple and Business</a>
                             <a href="#">Shop for Business</a>
@@ -82,7 +82,7 @@ export default function Footer() {
                             <a href="#">Shop for Veterans and Military</a>
                         </div>
 
-                        <div class="footer-column">
+                        <div className="footer-column">
                             <h4 className='mt-4 mb-2'>Apple Values</h4>
                             <a href="#">Accessibility</a>
                             <a href="#">Education</a>

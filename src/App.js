@@ -7,7 +7,7 @@ import Navbar from './Components/Navabr/Navbar';
 import routes from './routes';
 import productsContext from './Contexts/productsContext';
 import unitsDatas from './Datas';
-import { anotherUnitsDatas, moviesDatas, scrollSliderDatas } from './Datas';
+import { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas } from './Datas';
 import Footer from './Components/Footer/Footer';
 
 function App() {
@@ -18,6 +18,8 @@ function App() {
   const [userCarts, setUserCarts] = useState([])
   const [movies, setMovies] = useState(moviesDatas)
   const [scrollDatas, setScrollDatas] = useState(scrollSliderDatas)
+  const [categoryDatas, setCategoryDatas] = useState(productsCategoryData)
+  const [scrollCards, setScrollCardDatas] = useState(scrollCardDatas)
 
   return (
     <productsContext.Provider value={{
@@ -25,11 +27,15 @@ function App() {
       anotherUnits,
       movies,
       scrollDatas,
+      categoryDatas,
+      scrollCards,
+      userCarts,
+      setCategoryDatas,
       setScrollDatas,
+      setScrollCardDatas,
       setMovies,
       setAnotherUnits,
       setUnits,
-      userCarts,
       setUserCarts
     }}>
       <div className="App">
