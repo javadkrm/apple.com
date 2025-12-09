@@ -28,7 +28,7 @@ export default function Navbar() {
                         </div>
 
                         <div className="offcanvas-body">
-                            <ul className="navbar-nav justify-content-center w-100 justify-content-sm-start flex-grow-1 pe-3">
+                            <ul className="navbar-nav align-items-center justify-content-center w-100 justify-content-sm-start flex-grow-1 pe-3">
                                 <li className="nav-item text-md-start mx-auto">
                                     <Link className="nav-link" to="/store">Store</Link>
                                 </li>
@@ -49,6 +49,18 @@ export default function Navbar() {
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
                                     <Link className="nav-link" to="/Airpods">Airpods</Link>
+                                </li>
+                                <li className="nav-item text-md-start mx-auto">
+                                    <Link className="nav-link" to="/Airpods">TV & Home</Link>
+                                </li>
+                                <li className="nav-item text-md-start mx-auto">
+                                    <Link className="nav-link" to="/Airpods">Entertainment</Link>
+                                </li>
+                                <li className="nav-item text-md-start mx-auto">
+                                    <Link className="nav-link" to="/Airpods">Accessories</Link>
+                                </li>
+                                <li className="nav-item text-md-start mx-auto">
+                                    <Link className="nav-link" to="/Airpods">Support</Link>
                                 </li>
 
                                 <li className="nav-item text-md-start mx-auto">
