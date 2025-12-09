@@ -33,9 +33,20 @@ let scrollSliderDatas = [
     {id: 10, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
 ]
 
+let productsCategoryData = [
+    {id: 1, category: 'Mac', img: 'images/store-card-mac.png'},
+    {id: 2, category: 'iPhone', img: 'images/store-card-iphone.png'},
+    {id: 3, category: 'iPad', img: 'images/store-card-ipad.png'},
+    {id: 4, category: 'Apple Watch', img: 'images/store-card-watch.png'},
+    {id: 5, category: 'Apple Vision Pro', img: 'images/store-card-vision.png'},
+    {id: 6, category: 'Airpods', img: 'images/store-card-airpod.png'},
+    {id: 7, category: 'AirTag', img: 'images/store-card-airtag.png'},
+    {id: 8, category: 'Apple TV 4K', img: 'images/store-card-tv.png'},
+]
+
 export default unitsDatas
 
-export { anotherUnitsDatas, moviesDatas, scrollSliderDatas }
+export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData }
 
 
 // {id: 1, title: 'Give Something Special', img: 'images/apple-logo.jpg', desc: 'Find what they have been waiting for all year', firstBtnText:'Shop gifts',},

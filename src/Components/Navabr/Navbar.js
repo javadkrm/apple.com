@@ -65,13 +65,13 @@ export default function Navbar() {
 
                                 <li className="nav-item text-md-start mx-auto">
                                     <Link className="nav-link" to="/search">
-                                        <IoIosSearch className="fs-4" />
+                                        <IoIosSearch className="fs-5" />
                                     </Link>
                                 </li>
 
                                 <li className="nav-item text-md-start mx-auto">
                                     <Link className="nav-link" to="/bag">
-                                        <BsBag className="fs-4" />
+                                        <BsBag className="fs-6" />
                                     </Link>
                                 </li>
 
