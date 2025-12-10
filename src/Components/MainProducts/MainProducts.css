@@ -1,0 +1,107 @@
+/* لینک استایل اپلی */
+.mainProductLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* در اسلایدر استفاده می‌شود */
+.mainProductSlider {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.mainProductSlider::-webkit-scrollbar {
+  display: none;
+}
+
+/* کارت محصول */
+.mainProductCard {
+  width: 260px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Hover روی لینک اعمال می‌شود (نه خود کارت!) */
+.mainProductLink:hover .mainProductCard {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+}
+
+/* عکس محصول */
+.mainProductImg {
+  width: 70%;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.mainProductLink:hover .mainProductImg {
+  transform: scale(1.06);
+}
+
+/* عنوان */
+.mainProductTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* قیمت */
+.mainProductPrice {
+  font-size: 15px;
+  font-weight: 500;
+  color: #555 !important;
+}
+
+/* ------------------------------------ */
+/* ریسپانسیو */
+/* ------------------------------------ */
+
+@media (max-width: 768px) {
+  .mainProductCard {
+    width: 220px;
+    padding: 20px;
+  }
+  .mainProductImg { width: 75%; }
+  .mainProductTitle { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .mainProductCard {
+    width: 180px;
+    padding: 18px;
+    border-radius: 16px;
+  }
+  .mainProductImg { width: 80%; }
+  .mainProductTitle { font-size: 15px; }
+  .mainProductPrice { font-size: 13px; }
+}
+
+.addToCartBtn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 14px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  background: #0071e3;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.addToCartBtn:hover {
+  background: #005bb5;
+}

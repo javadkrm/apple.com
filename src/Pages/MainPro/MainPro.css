@@ -1,0 +1,16 @@
+.MainProContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 80vh; */
+}
+
+.MainProImg {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.MainProAddToCartBtn {
+    width: 140px;
+}

@@ -7,7 +7,7 @@ import Navbar from './Components/Navabr/Navbar';
 import routes from './routes';
 import productsContext from './Contexts/productsContext';
 import unitsDatas from './Datas';
-import { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas } from './Datas';
+import { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas, MainProductsData } from './Datas';
 import Footer from './Components/Footer/Footer';
 
 function App() {
@@ -20,16 +20,22 @@ function App() {
   const [scrollDatas, setScrollDatas] = useState(scrollSliderDatas)
   const [categoryDatas, setCategoryDatas] = useState(productsCategoryData)
   const [scrollCards, setScrollCardDatas] = useState(scrollCardDatas)
+  const [mainProducts, setMainProducts] = useState(MainProductsData)
+  const [userBagDatas, setUserBagDatas] = useState([])
 
   return (
     <productsContext.Provider value={{
       units,
       anotherUnits,
       movies,
+      mainProducts,
+      userBagDatas,
       scrollDatas,
       categoryDatas,
       scrollCards,
       userCarts,
+      setMainProducts,
+      setUserBagDatas,
       setCategoryDatas,
       setScrollDatas,
       setScrollCardDatas,
@@ -40,6 +46,9 @@ function App() {
     }}>
       <div className="App">
         <Navbar />
+        <aside className='sidebar'>
+          hello
+        </aside>
         {router}
         <Footer />
       </div>

@@ -53,9 +53,18 @@ let scrollCardDatas = [
     { id: 6, title: 'MacBook Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/macair.jpg' },
 ]
 
+let MainProductsData = [
+    { id: 1, title: '11-inch iPad Air', price: 50, img: '/images/ipad-air.jpg' },
+    { id: 2, title: 'AirPod Pro 3', price: 249, img: '/images/airpod-pro3.jpg' },
+    { id: 3, title: 'AirTag', price: 29, img: '/images/airtag.jpg' },
+    { id: 4, title: 'AirPods Max - orange', price: 140, img: '/images/airpods-max.jpg' },
+    { id: 5, title: 'Apple Pencil Pro', price: 129, img: '/images/pencil.jpg' },
+    { id: 6, title: 'iPad mini', price: 42, img: '/images/ipad-mini.jpg' },
+]
+
 export default unitsDatas
 
-export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas }
+export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas, MainProductsData }
 
 
 // {id: 1, title: 'Give Something Special', img: 'images/apple-logo.jpg', desc: 'Find what they have been waiting for all year', firstBtnText:'Shop gifts',},
