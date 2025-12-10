@@ -15,29 +15,21 @@ export default function MainPro() {
 
     if (!isInUserBag) {
       let newProductInfo = {
-        id: userBagDatas.length + 1,
+        id: pro.id,
         title: pro.title,
         img: pro.img,
         price: pro.price,
         count: 1
       }
-
       setUserBagDatas([...userBagDatas, newProductInfo])
     } else {
-      let userBag = [...userBagDatas]
-
-      userBag.some(product => {
-        if (product.title === pro.title) {
-          product.count++ 
-          return true
-        }
-      })
-
-      setUserBagDatas(userBag)
+      const updatedBag = userBagDatas.map(product =>
+        product.id === pro.id
+          ? { ...product, count: product.count + 1 }
+          : product
+      )
+      setUserBagDatas(updatedBag)
     }
-
-    console.log(userBagDatas);
-    
   }
 
   return (

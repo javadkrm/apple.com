@@ -7,7 +7,7 @@ import { BsBag } from 'react-icons/bs';
 
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar({ onBagClick }) {
     return (
         <div>
             <nav className="navbar navbar-expand-lg fixed-top bg-body-tertiary">
@@ -70,9 +70,9 @@ export default function Navbar() {
                                 </li>
 
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/bag">
+                                    <button onClick={onBagClick} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit' }} aria-label="Toggle shopping bag">
                                         <BsBag className="fs-6" />
-                                    </Link>
+                                    </button>
                                 </li>
 
                             </ul>
