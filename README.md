@@ -6,7 +6,7 @@ Welcome to my GitHub Pages portfolio. This repository hosts my personal website 
 
 ## 🌍 Live Portfolio
 
-🔗 **GitHub Pages:** [https://javadkrm.github.io/](https://javadkrm.github.io/)
+🔗 **GitHub Pages:** [https://javadkrm.github.io/](https://javadkrm.github.io/apple.com)
 
 > Some projects are deployed as GitHub Project Pages and live under their own paths.
 
