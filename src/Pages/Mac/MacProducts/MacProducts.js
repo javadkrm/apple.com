@@ -6,27 +6,32 @@ import { useContext } from 'react'
 export default function MacProducts({ selectedCategory = 'All Products' }) {
     const { macProducts, userBagDatas, setUserBagDatas } = useContext(productsContext)
     const filtered = selectedCategory === 'All Products' ? macProducts : macProducts.filter(p => p.category === selectedCategory)
-    const addToUserBag = (pro) => {
-        let isInUserBag = userBagDatas.some(product => product.id === pro.id)
 
-        if (!isInUserBag) {
-            let newProductInfo = {
-                id: pro.id,
-                title: pro.title,
-                img: pro.img,
-                price: pro.price,
-                count: 1
+    const addToUserBag = (pro) => {
+        setUserBagDatas(prevBag => {
+            const isInUserBag = prevBag.some(product => product.id === pro.id)
+
+            if (!isInUserBag) {
+                return [
+                    ...prevBag,
+                    {
+                        id: pro.id,
+                        title: pro.title,
+                        img: pro.img,
+                        price: pro.price,
+                        count: 1
+                    }
+                ]
+            } else {
+                return prevBag.map(product =>
+                    product.id === pro.id
+                        ? { ...product, count: product.count + 1 }
+                        : product
+                )
             }
-            setUserBagDatas([...userBagDatas, newProductInfo])
-        } else {
-            const updatedBag = userBagDatas.map(product =>
-                product.id === pro.id
-                    ? { ...product, count: product.count + 1 }
-                    : product
-            )
-            setUserBagDatas(updatedBag)
-        }
+        })
     }
+
     return (
         <>
             {filtered.map(product => (

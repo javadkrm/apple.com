@@ -12,9 +12,11 @@ export default function Bag({ isOpen = false, onClose = () => { } }) {
     }, [isOpen, onClose])
 
     const removeFromBag = (item) => {
-        let updatedBag = userBagDatas.filter(product => product.id !== item.id)
-        setUserBagDatas(updatedBag)
+        setUserBagDatas(prevBag =>
+            prevBag.filter(product => product.id !== item.id)
+        )
     }
+
 
     const totalPrice = userBagDatas.reduce((sum, item) => {
         const price = Number(item.price) || 0
