@@ -16,9 +16,11 @@ export default function Bag({ isOpen = false, onClose = () => { } }) {
         setUserBagDatas(updatedBag)
     }
 
-    let totalPrice = userBagDatas.map(item => {
-        return item.price * item.count
-    })
+    const totalPrice = userBagDatas.reduce((sum, item) => {
+        const price = Number(item.price) || 0
+        const count = Number(item.count) || 0
+        return sum + price * count
+    }, 0)
     return (
         <div>
             {isOpen && <div className="bagBackdrop" onClick={onClose} />}
@@ -28,7 +30,7 @@ export default function Bag({ isOpen = false, onClose = () => { } }) {
 
                 <h2 className='bagTitle text-center py-3 fw-bold'>Your Bag</h2>
                 <p className='totalPrice fs-5 fw-semibold text-center mb-4'>
-                    {totalPrice == 0 ? 'Total: 0$' : `Total: ${totalPrice}$`}
+                    {`Total: $${totalPrice.toFixed(2)}`}
                 </p>
                 <div className='bagItemsContainer px-3'>
                     {userBagDatas.length === 0 ? (<p>Your Bag Is Empty</p>) : (

@@ -4,8 +4,29 @@ import productsContext from '../../../Contexts/productsContext'
 import { useContext } from 'react'
 
 export default function MacProducts({ selectedCategory = 'All Products' }) {
-    const { macProducts } = useContext(productsContext)
+    const { macProducts, userBagDatas, setUserBagDatas } = useContext(productsContext)
     const filtered = selectedCategory === 'All Products' ? macProducts : macProducts.filter(p => p.category === selectedCategory)
+    const addToUserBag = (pro) => {
+        let isInUserBag = userBagDatas.some(product => product.id === pro.id)
+
+        if (!isInUserBag) {
+            let newProductInfo = {
+                id: pro.id,
+                title: pro.title,
+                img: pro.img,
+                price: pro.price,
+                count: 1
+            }
+            setUserBagDatas([...userBagDatas, newProductInfo])
+        } else {
+            const updatedBag = userBagDatas.map(product =>
+                product.id === pro.id
+                    ? { ...product, count: product.count + 1 }
+                    : product
+            )
+            setUserBagDatas(updatedBag)
+        }
+    }
     return (
         <>
             {filtered.map(product => (
@@ -13,10 +34,12 @@ export default function MacProducts({ selectedCategory = 'All Products' }) {
                     <div className='macProductCard d-flex flex-column align-items-center text-center p-3'>
                         <img src={product.img} alt={product.title} className='macProductImg mb-3' />
                         <h5 className='macProductTitle mb-2'>{product.title}</h5>
-                        <span className='macProductPrice fw-semibold'>{product.price}$</span>
+                        <span className='macProductPrice fw-semibold'>{product.price}</span>
                         <div className='productButtons d-flex gap-2 mt-3'>
                             <button className='btn btn-primary rounded-pill'>Learn More</button>
-                            <button className='btn btn-outline-primary rounded-pill'>Buy</button>
+                            <button className='btn btn-outline-primary rounded-pill' onClick={() => {
+                                addToUserBag(product)
+                            }}>Buy</button>
                         </div>
                     </div>
                 </div>
