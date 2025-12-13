@@ -57,7 +57,7 @@ let scrollCardDatas = [
 
 let MainProductsData = [
     { id: 1, title: '11-inch iPad Air', price: 50, img: `${PUBLIC}/images/ipad-air.jpg` },
-    { id: 2, title: 'AirPod Pro 3', price: 249, img: `${PUBLIC}/images/airpods-pro-3.jpg` },
+    { id: 2, title: 'AirPod Pro 3', price: 249, img: `${PUBLIC}/images/airpod-pro-3.jpg` },
     { id: 3, title: 'AirTag', price: 29, img: `${PUBLIC}/images/airtag.jpg` },
     { id: 4, title: 'AirPods Max - orange', price: 140, img: `${PUBLIC}/images/airpods-max.jpg` },
     { id: 5, title: 'Apple Pencil Pro', price: 129, img: `${PUBLIC}/images/pencil.jpg` },
