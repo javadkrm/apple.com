@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/apple.com/static/css/main.d59e86ad.css",
+    "main.js": "/apple.com/static/js/main.40f4b1c8.js",
+    "index.html": "/apple.com/index.html",
+    "main.d59e86ad.css.map": "/apple.com/static/css/main.d59e86ad.css.map",
+    "main.40f4b1c8.js.map": "/apple.com/static/js/main.40f4b1c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d59e86ad.css",
+    "static/js/main.40f4b1c8.js"
+  ]
+}
