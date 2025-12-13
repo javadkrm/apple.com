@@ -15,12 +15,16 @@ export default function Navbar({ onBagClick }) {
                     <Link to="/" className="navbar-brand d-flex">
                         <FaApple />
                     </Link>
+                    <button className="d-lg-none ms-2" onClick={onBagClick} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit' }} aria-label="Toggle shopping bag small-screen">
+                        <BsBag className="fs-6" />
+                    </button>
                     <button className="navbar-toggler" type="button"
                         data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar"
                         aria-controls="offcanvasNavbar">
                         <span className="navbar-toggler-icon"></span>
                     </button>
+            
                     <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasNavbar">
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title">Menu</h5>
@@ -69,7 +73,7 @@ export default function Navbar({ onBagClick }) {
                                     </Link>
                                 </li>
 
-                                <li className="nav-item text-md-start mx-auto">
+                                <li className="nav-item text-md-start mx-auto d-none d-lg-block">
                                     <button onClick={onBagClick} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit' }} aria-label="Toggle shopping bag">
                                         <BsBag className="fs-6" />
                                     </button>
