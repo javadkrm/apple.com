@@ -13,6 +13,7 @@
 
 .MainProAddToCartBtn {
     width: 140px;
+    background: linear-gradient(180deg, #0a84ff, #005bb5);
 }
 
 @media (max-width: 600px) {
