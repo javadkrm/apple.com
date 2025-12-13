@@ -1,77 +1,79 @@
+let PUBLIC = process.env.PUBLIC_URL || '';
+
 let unitsDatas = [
-    { id: 2, title: 'iPhone', img: 'images/iphone-17-colors.jpg', desc: 'Say hello to the lastest generation of iPhone', firstBtnText: 'Learn More', secondBtnText: 'Shop iPhone' },
-    { id: 3, title: 'AirPods Pro 3', img: 'images/airpodPro3.jpg', desc: 'The Worlds best in-ear Active Noice Cancellation', firstBtnText: 'Learn More', secondBtnText: 'Buy' },
+    { id: 2, title: 'iPhone', img: `${PUBLIC}/images/iPhone-17-Colors.jpg`, desc: 'Say hello to the lastest generation of iPhone', firstBtnText: 'Learn More', secondBtnText: 'Shop iPhone' },
+    { id: 3, title: 'AirPods Pro 3', img: `${PUBLIC}/images/airpodPro3.jpg`, desc: 'The Worlds best in-ear Active Noice Cancellation', firstBtnText: 'Learn More', secondBtnText: 'Buy' },
 ]
 
 let anotherUnitsDatas = [
-    { id: 1, title: 'iPad', img: 'images/ipad.jpg', desc: 'Now superCharged by the M3 chip', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'blueBg' },
-    { id: 2, title: 'Watch series 11', img: 'images/watch.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 3, title: 'iPad', img: 'images/ipads.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 4, title: 'macBook Air', img: 'images/macbook.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 5, title: 'Trade In', img: 'images/customers.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
-    { id: 6, title: 'Card', img: 'images/cart.jpg', desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 1, title: 'iPad', img: `${PUBLIC}/images/ipad.jpg`, desc: 'Now superCharged by the M3 chip', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'blueBg' },
+    { id: 2, title: 'Watch series 11', img: `${PUBLIC}/images/watch.jpg`, desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 3, title: 'iPad', img: `${PUBLIC}/images/ipads.jpg`, desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 4, title: 'macBook Air', img: `${PUBLIC}/images/macbook.jpg`, desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 5, title: 'Trade In', img: `${PUBLIC}/images/customers.jpg`, desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
+    { id: 6, title: 'Card', img: `${PUBLIC}/images/cart.jpg`, desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
 ]
 
 let moviesDatas = [
-    { id: 1, category: 'Comedy', activity: 'active', desc: 'same family, new plan', img: 'images/family.jpg' },
-    { id: 2, category: 'Drama', activity: '', desc: 'Happiness is a state of the mind', img: 'images/pluribus.jpg' },
-    { id: 3, category: 'Thriller', activity: '', desc: 'Start your holidays on a high notes', img: 'images/spirited.jpg' },
-    { id: 4, category: 'Action', activity: '', desc: '600,000 squares mile, now here to hide', img: 'images/front.jpg' },
-    { id: 5, category: 'Comedy', activity: '', desc: 'the truth is the top story', img: 'images/morning.jpg' },
+    { id: 1, category: 'Comedy', activity: 'active', desc: 'same family, new plan', img: `${PUBLIC}/images/family.jpg` },
+    { id: 2, category: 'Drama', activity: '', desc: 'Happiness is a state of the mind', img: `${PUBLIC}/images/pluribus.jpg` },
+    { id: 3, category: 'Thriller', activity: '', desc: 'Start your holidays on a high notes', img: `${PUBLIC}/images/spirited.jpg` },
+    { id: 4, category: 'Action', activity: '', desc: '600,000 squares mile, now here to hide', img: `${PUBLIC}/images/front.jpg` },
+    { id: 5, category: 'Comedy', activity: '', desc: 'the truth is the top story', img: `${PUBLIC}/images/morning.jpg` },
 ]
 
 let scrollSliderDatas = [
-    { id: 1, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
-    { id: 2, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
-    { id: 3, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
-    { id: 4, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
-    { id: 5, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
-    { id: 6, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
-    { id: 7, img: 'images/z2.jpg', btnCaption: 'Watch Now' },
-    { id: 8, img: 'images/gym.jpg', btnCaption: 'Watch Now' },
-    { id: 9, img: 'images/ww.jpg', btnCaption: 'Watch Now' },
-    { id: 10, img: 'images/nba.jpg', btnCaption: 'Watch Now' },
+    { id: 1, img: `${PUBLIC}/images/ww.jpg`, btnCaption: 'Watch Now' },
+    { id: 2, img: `${PUBLIC}/images/nba.jpg`, btnCaption: 'Watch Now' },
+    { id: 3, img: `${PUBLIC}/images/z2.jpg`, btnCaption: 'Watch Now' },
+    { id: 4, img: `${PUBLIC}/images/gym.jpg`, btnCaption: 'Watch Now' },
+    { id: 5, img: `${PUBLIC}/images/ww.jpg`, btnCaption: 'Watch Now' },
+    { id: 6, img: `${PUBLIC}/images/nba.jpg`, btnCaption: 'Watch Now' },
+    { id: 7, img: `${PUBLIC}/images/z2.jpg`, btnCaption: 'Watch Now' },
+    { id: 8, img: `${PUBLIC}/images/gym.jpg`, btnCaption: 'Watch Now' },
+    { id: 9, img: `${PUBLIC}/images/ww.jpg`, btnCaption: 'Watch Now' },
+    { id: 10, img: `${PUBLIC}/images/nba.jpg`, btnCaption: 'Watch Now' },
 ]
 
 let productsCategoryData = [
-    { id: 1, category: 'Mac', img: 'images/store-card-mac.png' },
-    { id: 2, category: 'iPhone', img: 'images/store-card-iphone.png' },
-    { id: 3, category: 'iPad', img: 'images/store-card-ipad.png' },
-    { id: 4, category: 'Apple Watch', img: 'images/store-card-watch.png' },
-    { id: 5, category: 'Apple Vision Pro', img: 'images/store-card-vision.png' },
-    { id: 6, category: 'Airpods', img: 'images/store-card-airpod.png' },
-    { id: 7, category: 'AirTag', img: 'images/store-card-airtag.png' },
-    { id: 8, category: 'Apple TV 4K', img: 'images/store-card-tv.png' },
+    { id: 1, category: 'Mac', img: `${PUBLIC}/images/store-card-mac.png` },
+    { id: 2, category: 'iPhone', img: `${PUBLIC}/images/store-card-iphone.png` },
+    { id: 3, category: 'iPad', img: `${PUBLIC}/images/store-card-ipad.png` },
+    { id: 4, category: 'Apple Watch', img: `${PUBLIC}/images/store-card-watch.png` },
+    { id: 5, category: 'Apple Vision Pro', img: `${PUBLIC}/images/store-card-vision.png` },
+    { id: 6, category: 'Airpods', img: `${PUBLIC}/images/store-card-airpod.png` },
+    { id: 7, category: 'AirTag', img: `${PUBLIC}/images/store-card-airtag.png` },
+    { id: 8, category: 'Apple TV 4K', img: `${PUBLIC}/images/store-card-tv.png` },
 ]
 
 let scrollCardDatas = [
-    { id: 1, title: 'iPhone 17 pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/iphone17pro.jpg' },
-    { id: 2, title: 'MacBook Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/mac.jpg' },
-    { id: 3, title: 'iPad Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/ipadpro.jpg' },
-    { id: 4, title: 'Apple Watch series 11', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/watch11.jpg' },
-    { id: 5, title: 'iPhone Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/iphoneair.jpg' },
-    { id: 6, title: 'MacBook Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: 'images/macair.jpg' },
+    { id: 1, title: 'iPhone 17 pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/iphone17pro.jpg` },
+    { id: 2, title: 'MacBook Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/mac.jpg` },
+    { id: 3, title: 'iPad Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/ipadpro.jpg` },
+    { id: 4, title: 'Apple Watch series 11', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/watch11.jpg` },
+    { id: 5, title: 'iPhone Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/iphoneair.jpg` },
+    { id: 6, title: 'MacBook Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/macair.jpg` },
 ]
 
 let MainProductsData = [
-    { id: 1, title: '11-inch iPad Air', price: 50, img: '/images/ipad-air.jpg' },
-    { id: 2, title: 'AirPod Pro 3', price: 249, img: '/images/airpod-pro3.jpg' },
-    { id: 3, title: 'AirTag', price: 29, img: '/images/airtag.jpg' },
-    { id: 4, title: 'AirPods Max - orange', price: 140, img: '/images/airpods-max.jpg' },
-    { id: 5, title: 'Apple Pencil Pro', price: 129, img: '/images/pencil.jpg' },
-    { id: 6, title: 'iPad mini', price: 42, img: '/images/ipad-mini.jpg' },
+    { id: 1, title: '11-inch iPad Air', price: 50, img: `${PUBLIC}/images/ipad-air.jpg` },
+    { id: 2, title: 'AirPod Pro 3', price: 249, img: `${PUBLIC}/images/airpod-pro3.jpg` },
+    { id: 3, title: 'AirTag', price: 29, img: `${PUBLIC}/images/airtag.jpg` },
+    { id: 4, title: 'AirPods Max - orange', price: 140, img: `${PUBLIC}/images/airpods-max.jpg` },
+    { id: 5, title: 'Apple Pencil Pro', price: 129, img: `${PUBLIC}/images/pencil.jpg` },
+    { id: 6, title: 'iPad mini', price: 42, img: `${PUBLIC}/images/ipad-mini.jpg` },
 ]
 
 let macPageProducts = [
-    { id: 1, category: 'Laptops', title: 'MacBook Air', price: 999, img: '/images/mac.jpg' },
-    { id: 2, category: 'Laptops', title: 'MacBook Pro 13-inch', price: 1299, img: '/images/mac.jpg' },
-    { id: 3, category: 'Laptops', title: 'MacBook Pro 16-inch', price: 2399, img: '/images/mac.jpg' },
-    { id: 4, category: 'Desktops', title: 'iMac 24-inch', price: 1299, img: '/images/macmini.jpg' },
-    { id: 5, category: 'Desktops', title: 'Mac mini', price: 699, img: '/images/macmini.jpg' },
-    { id: 6, category: 'Desktops', title: 'Mac Studio', price: 1999, img: '/images/desktop.jpg' },
-    { id: 7, category: 'Desktops', title: 'Mac Pro', price: 5999, img: '/images/desktop.jpg' },
-    { id: 8, category: 'Displays', title: 'Studio Display', price: 1599, img: '/images/display.jpg' },
-    { id: 9, category: 'Displays', title: 'AppleCare+ for Mac', price: 249, img: '/images/display.jpg' },
+    { id: 1, category: 'Laptops', title: 'MacBook Air', price: 999, img: `${PUBLIC}/images/mac.jpg` },
+    { id: 2, category: 'Laptops', title: 'MacBook Pro 13-inch', price: 1299, img: `${PUBLIC}/images/mac.jpg` },
+    { id: 3, category: 'Laptops', title: 'MacBook Pro 16-inch', price: 2399, img: `${PUBLIC}/images/mac.jpg` },
+    { id: 4, category: 'Desktops', title: 'iMac 24-inch', price: 1299, img: `${PUBLIC}/images/macmini.jpg` },
+    { id: 5, category: 'Desktops', title: 'Mac mini', price: 699, img: `${PUBLIC}/images/macmini.jpg` },
+    { id: 6, category: 'Desktops', title: 'Mac Studio', price: 1999, img: `${PUBLIC}/images/desktop.jpg` },
+    { id: 7, category: 'Desktops', title: 'Mac Pro', price: 5999, img: `${PUBLIC}/images/desktop.jpg` },
+    { id: 8, category: 'Displays', title: 'Studio Display', price: 1599, img: `${PUBLIC}/images/display.jpg` },
+    { id: 9, category: 'Displays', title: 'AppleCare+ for Mac', price: 249, img: `${PUBLIC}/images/display.jpg` },
 ]
 
 export default unitsDatas
