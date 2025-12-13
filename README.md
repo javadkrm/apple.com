@@ -1,48 +1,64 @@
-# 🌐 Personal Portfolio – Javad KRM
+# 👨‍💻 Mohamad Javad | Junior Frontend / React Developer
 
-این ریپازیتوری صفحه‌ی GitHub Pages من است که برای نمایش پروژه‌ها و نمونه‌کارهای فرانت‌اند (React) استفاده می‌شود.
-
-## 🚀 Live Demo
-
-* **GitHub Pages:** [https://javadkrm.github.io/apple.com/]
-
-> اگر پروژه‌ها به‌صورت Project Page دیپلوی شده‌اند، لینک هر پروژه در بخش Projects آمده است.
+Welcome to my GitHub Pages portfolio. This repository hosts my personal website where I showcase frontend projects, experiments, and learning progress with a focus on **React** and modern web development.
 
 ---
 
-## 🧩 Projects
+## 🌍 Live Portfolio
 
-### 🍎 Apple Shop (React)
+🔗 **GitHub Pages:** [https://javadkrm.github.io/](https://javadkrm.github.io/)
 
-یک پروژه‌ی تمرینی با الهام از Apple Store شامل:
+> Some projects are deployed as GitHub Project Pages and live under their own paths.
 
-* React (CRA)
+---
+
+## 🚀 Featured Projects
+
+### 🍎 Apple Shop – React Project
+
+A practice project inspired by the Apple Store, built to strengthen my skills in component-based architecture and deployment.
+
+**Key Features:**
+
+* React (Create React App)
+* React Router
+* Context API for state management
+* Responsive UI
+* GitHub Pages deployment
+* Asset handling with `PUBLIC_URL`
+
+🔗 **Live Demo:** [https://javadkrm.github.io/apple.com/](https://javadkrm.github.io/apple.com/)
+
+---
+
+## 🧰 Tech Stack
+
+**Frontend**
+
+* HTML5, CSS3
+* JavaScript (ES6+)
+* React
+
+**Libraries & Tools**
+
 * React Router
 * Context API
-* Responsive UI
-* GitHub Pages Deployment
+* Bootstrap
+* Git & GitHub
 
-**Live:** [https://javadkrm.github.io/apple.com/](https://javadkrm.github.io/apple.com/)
+**Deployment**
 
----
-
-## 🛠 Tech Stack
-
-* **Frontend:** React, JavaScript (ES6+)
-* **Styling:** CSS / Bootstrap
-* **Routing:** React Router
-* **State Management:** Context API
-* **Deployment:** GitHub Pages
+* GitHub Pages
 
 ---
 
-## 📁 Deployment Notes (GitHub Pages)
+## 📌 Development & Deployment Notes
 
-برای جلوگیری از مشکل لود نشدن assetها (image/css/js):
+To ensure stable deployment on GitHub Pages:
 
-* استفاده از `process.env.PUBLIC_URL`
-* تنظیم درست `homepage` در `package.json`
-* رعایت lowercase و kebab-case برای نام فایل‌ها
+* Correct `homepage` configuration in `package.json`
+* Use of `process.env.PUBLIC_URL` for static assets
+* Case-sensitive and normalized image filenames (kebab-case)
 
 ```json
 "homepage": "https://javadkrm.github.io/apple.com"
@@ -50,19 +66,17 @@
 
 ---
 
-## 👤 About Me
+## 🎯 Career Goal
 
-* **Name:** Mohamad Javad
-* **Role:** Junior Frontend Developer
-* **Focus:** React, UI Development, Clean Code
+I am a **Junior Frontend Developer** focused on building clean, responsive, and user-friendly interfaces with **React**. I am continuously learning best practices in modern frontend development and looking for opportunities to grow through real-world projects.
 
 ---
 
 ## 📫 Contact
 
-* GitHub: [https://github.com/javadkrm](https://github.com/javadkrm)
+* **GitHub:** [https://github.com/javadkrm](https://github.com/javadkrm)
 
 ---
 
-⭐ اگر پروژه‌ها برات مفید بودن خوشحال می‌شم ریپو رو Star کنی!
+⭐ If you like my work, feel free to star the repository or check out my other projects!
 
