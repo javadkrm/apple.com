@@ -1,3 +1,30 @@
 .macContainer {
     padding-top: 70px
 }
+
+.macTitle {
+    font-size: 80px;
+    font-weight: 600;
+}
+
+.categories{
+    background-color: var(--main-white);
+}
+
+/* Make .categories full width on mobile so the categoriesBar can line up nicely */
+@media (max-width: 768px) {
+    .categories {
+        width: 100% !important;
+        padding: 0 0.5rem;
+    }
+}
+
+/* For very small screens, stack the chips to fill width */
+@media (max-width: 420px) {
+    .categories .categoriesBar {
+        flex-direction: row;
+        gap: 8px;
+        align-items: stretch;
+    }
+    .categories .categoryBtn { width: 100%; }
+}

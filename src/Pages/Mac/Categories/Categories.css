@@ -1,0 +1,72 @@
+/* categories bar: default desktop layout */
+.categoriesBar {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 8px 12px;
+}
+
+.categoryBtn {
+	background: transparent;
+	color: var(--text-color, #0b1226);
+	border: 1px solid rgba(15,23,42,0.06);
+	padding: 6px 12px;
+	font-size: 0.95rem;
+	white-space: nowrap;
+	transition: background 200ms ease, transform 120ms ease, color 120ms ease;
+}
+
+.categoryBtn:hover {
+	transform: translateY(-2px);
+	background: rgba(2,6,23,0.04);
+}
+
+/* Active state */
+.categoryBtn.active {
+	background: linear-gradient(180deg, #0a84ff, #005bb5);
+	color: white;
+	border-color: transparent;
+	box-shadow: 0 8px 30px rgba(2,6,23,0.08);
+}
+
+.categoryBtn:focus-visible {
+	outline: 3px solid rgba(10,132,255,0.18);
+	outline-offset: 3px;
+}
+
+/* Mobile: horizontal scroll chips (touch-friendly) */
+@media (max-width: 768px) {
+	.categoriesBar {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		gap: 10px;
+		padding: 8px 10px;
+		scroll-snap-type: x mandatory;
+	}
+
+	.categoryBtn {
+		display: inline-block;
+		scroll-snap-align: start;
+		flex: 0 0 auto;
+		min-width: auto;
+		padding: 8px 14px;
+	}
+}
+
+/* Small screens: stack into rows if too many items (optional) */
+@media (max-width: 420px) {
+	.categoriesBar {
+		gap: 8px;
+	}
+	.categoryBtn {
+		padding: 10px 16px;
+		font-size: 0.95rem;
+	}
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.categoryBtn { transition: none !important; }
+}
+

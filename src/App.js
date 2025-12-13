@@ -7,7 +7,7 @@ import Navbar from './Components/Navabr/Navbar';
 import routes from './routes';
 import productsContext from './Contexts/productsContext';
 import unitsDatas from './Datas';
-import { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas, MainProductsData } from './Datas';
+import { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas, MainProductsData, macPageProducts } from './Datas';
 import Footer from './Components/Footer/Footer';
 import Bag from './Components/Bag/Bag';
 
@@ -22,6 +22,7 @@ function App() {
   const [categoryDatas, setCategoryDatas] = useState(productsCategoryData)
   const [scrollCards, setScrollCardDatas] = useState(scrollCardDatas)
   const [mainProducts, setMainProducts] = useState(MainProductsData)
+  const [macProducts, setMacProducts] = useState(macPageProducts)
   const [userBagDatas, setUserBagDatas] = useState([])
   const [isBagOpen, setIsBagOpen] = useState(false)
 
@@ -36,6 +37,9 @@ function App() {
       categoryDatas,
       scrollCards,
       userCarts,
+      isBagOpen,
+      macProducts,
+      setMacProducts,
       setMainProducts,
       setUserBagDatas,
       setCategoryDatas,
@@ -45,7 +49,6 @@ function App() {
       setAnotherUnits,
       setUnits,
       setUserCarts,
-      isBagOpen,
       setIsBagOpen
     }}>
       <div className="App">

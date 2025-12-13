@@ -62,9 +62,21 @@ let MainProductsData = [
     { id: 6, title: 'iPad mini', price: 42, img: '/images/ipad-mini.jpg' },
 ]
 
+let macPageProducts = [
+    { id: 1, category: 'Laptops', title: 'MacBook Air', price: 999, img: '/images/mac.jpg' },
+    { id: 2, category: 'Laptops', title: 'MacBook Pro 13-inch', price: 1299, img: '/images/mac.jpg' },
+    { id: 3, category: 'Laptops', title: 'MacBook Pro 16-inch', price: 2399, img: '/images/mac.jpg' },
+    { id: 4, category: 'Desktops', title: 'iMac 24-inch', price: 1299, img: '/images/macmini.jpg' },
+    { id: 5, category: 'Desktops', title: 'Mac mini', price: 699, img: '/images/macmini.jpg' },
+    { id: 6, category: 'Desktops', title: 'Mac Studio', price: 1999, img: '/images/desktop.jpg' },
+    { id: 7, category: 'Desktops', title: 'Mac Pro', price: 5999, img: '/images/desktop.jpg' },
+    { id: 8, category: 'Displays', title: 'Studio Display', price: 1599, img: '/images/display.jpg' },
+    { id: 9, category: 'Displays', title: 'AppleCare+ for Mac', price: 249, img: '/images/display.jpg' },
+]
+
 export default unitsDatas
 
-export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas, MainProductsData }
+export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas, MainProductsData, macPageProducts}
 
 
 // {id: 1, title: 'Give Something Special', img: 'images/apple-logo.jpg', desc: 'Find what they have been waiting for all year', firstBtnText:'Shop gifts',},
