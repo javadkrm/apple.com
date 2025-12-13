@@ -2,7 +2,7 @@
 
 Welcome to my GitHub Pages portfolio. This repository hosts my personal website where I showcase frontend projects, experiments, and learning progress with a focus on **React** and modern web development.
 
----
+
 
 ## 🌍 Live Portfolio
 
@@ -10,7 +10,7 @@ Welcome to my GitHub Pages portfolio. This repository hosts my personal website 
 
 > Some projects are deployed as GitHub Project Pages and live under their own paths.
 
----
+
 
 ## 🚀 Featured Projects
 
@@ -29,7 +29,6 @@ A practice project inspired by the Apple Store, built to strengthen my skills in
 
 🔗 **Live Demo:** [https://javadkrm.github.io/apple.com/](https://javadkrm.github.io/apple.com/)
 
----
 
 ## 🧰 Tech Stack
 
@@ -50,7 +49,7 @@ A practice project inspired by the Apple Store, built to strengthen my skills in
 
 * GitHub Pages
 
----
+
 
 ## 📌 Development & Deployment Notes
 
@@ -62,9 +61,7 @@ To ensure stable deployment on GitHub Pages:
 
 ```json
 "homepage": "https://javadkrm.github.io/apple.com"
-```
 
----
 
 ## 🎯 Career Goal
 
