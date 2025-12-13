@@ -1,8 +1,8 @@
 let PUBLIC = process.env.PUBLIC_URL || '';
 
 let unitsDatas = [
-    { id: 2, title: 'iPhone', img: `${PUBLIC}/images/iPhone-17-Colors.jpg`, desc: 'Say hello to the lastest generation of iPhone', firstBtnText: 'Learn More', secondBtnText: 'Shop iPhone' },
-    { id: 3, title: 'AirPods Pro 3', img: `${PUBLIC}/images/airpodPro3.jpg`, desc: 'The Worlds best in-ear Active Noice Cancellation', firstBtnText: 'Learn More', secondBtnText: 'Buy' },
+    { id: 2, title: 'iPhone', img: `${PUBLIC}/images/iphone-17-colors.jpg`, desc: 'Say hello to the lastest generation of iPhone', firstBtnText: 'Learn More', secondBtnText: 'Shop iPhone' },
+    { id: 3, title: 'AirPods Pro 3', img: `${PUBLIC}/images/airpods-pro-3.jpg`, desc: 'The Worlds best in-ear Active Noice Cancellation', firstBtnText: 'Learn More', secondBtnText: 'Buy' },
 ]
 
 let anotherUnitsDatas = [
@@ -47,17 +47,17 @@ let productsCategoryData = [
 ]
 
 let scrollCardDatas = [
-    { id: 1, title: 'iPhone 17 pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/iphone17pro.jpg` },
+    { id: 1, title: 'iPhone 17 pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/iphone-17-pro.jpg` },
     { id: 2, title: 'MacBook Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/mac.jpg` },
-    { id: 3, title: 'iPad Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/ipadpro.jpg` },
-    { id: 4, title: 'Apple Watch series 11', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/watch11.jpg` },
-    { id: 5, title: 'iPhone Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/iphoneair.jpg` },
-    { id: 6, title: 'MacBook Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/macair.jpg` },
+    { id: 3, title: 'iPad Pro', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/ipad-pro.jpg` },
+    { id: 4, title: 'Apple Watch series 11', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/watch-11.jpg` },
+    { id: 5, title: 'iPhone Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/iphone-air.jpg` },
+    { id: 6, title: 'MacBook Air', price: 'From $999 or $41.62/mo. for 24 mo.*', img: `${PUBLIC}/images/mac-air.jpg` },
 ]
 
 let MainProductsData = [
     { id: 1, title: '11-inch iPad Air', price: 50, img: `${PUBLIC}/images/ipad-air.jpg` },
-    { id: 2, title: 'AirPod Pro 3', price: 249, img: `${PUBLIC}/images/airpod-pro3.jpg` },
+    { id: 2, title: 'AirPod Pro 3', price: 249, img: `${PUBLIC}/images/airpods-pro-3.jpg` },
     { id: 3, title: 'AirTag', price: 29, img: `${PUBLIC}/images/airtag.jpg` },
     { id: 4, title: 'AirPods Max - orange', price: 140, img: `${PUBLIC}/images/airpods-max.jpg` },
     { id: 5, title: 'Apple Pencil Pro', price: 129, img: `${PUBLIC}/images/pencil.jpg` },
@@ -68,8 +68,8 @@ let macPageProducts = [
     { id: 1, category: 'Laptops', title: 'MacBook Air', price: 999, img: `${PUBLIC}/images/mac.jpg` },
     { id: 2, category: 'Laptops', title: 'MacBook Pro 13-inch', price: 1299, img: `${PUBLIC}/images/mac.jpg` },
     { id: 3, category: 'Laptops', title: 'MacBook Pro 16-inch', price: 2399, img: `${PUBLIC}/images/mac.jpg` },
-    { id: 4, category: 'Desktops', title: 'iMac 24-inch', price: 1299, img: `${PUBLIC}/images/macmini.jpg` },
-    { id: 5, category: 'Desktops', title: 'Mac mini', price: 699, img: `${PUBLIC}/images/macmini.jpg` },
+    { id: 4, category: 'Desktops', title: 'iMac 24-inch', price: 1299, img: `${PUBLIC}/images/mac-mini.jpg` },
+    { id: 5, category: 'Desktops', title: 'Mac mini', price: 699, img: `${PUBLIC}/images/mac-mini.jpg` },
     { id: 6, category: 'Desktops', title: 'Mac Studio', price: 1999, img: `${PUBLIC}/images/desktop.jpg` },
     { id: 7, category: 'Desktops', title: 'Mac Pro', price: 5999, img: `${PUBLIC}/images/desktop.jpg` },
     { id: 8, category: 'Displays', title: 'Studio Display', price: 1599, img: `${PUBLIC}/images/display.jpg` },
