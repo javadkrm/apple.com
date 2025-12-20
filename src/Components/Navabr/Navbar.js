@@ -34,41 +34,41 @@ export default function Navbar({ onBagClick }) {
                         <div className="offcanvas-body">
                             <ul className="navbar-nav align-items-center justify-content-center w-100 justify-content-sm-start flex-grow-1 pe-3">
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/store">Store</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/store">Store</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Mac">Mac</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Mac">Mac</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/iPad">iPad</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/iPad">iPad</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/iPhone">iPhone</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/iPhone">iPhone</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Watch">Watch</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Watch">Watch</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Vision">Vision</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Vision">Vision</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Airpods">Airpods</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Airpods</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Airpods">TV & Home</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">TV & Home</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Airpods">Entertainment</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Entertainment</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Airpods">Accessories</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Accessories</Link>
                                 </li>
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/Airpods">Support</Link>
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Support</Link>
                                 </li>
 
                                 <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" to="/search">
+                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/search">
                                         <IoIosSearch className="fs-5" />
                                     </Link>
                                 </li>
