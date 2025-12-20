@@ -1,91 +1,135 @@
-import React from 'react'
-import './Navbar.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import { Offcanvas } from "bootstrap";
+import "./Navbar.css";
 
 import { FaApple } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
-import { BsBag } from 'react-icons/bs';
-
-import { Link } from 'react-router-dom';
+import { BsBag } from "react-icons/bs";
 
 export default function Navbar({ onBagClick }) {
-    return (
-        <div>
-            <nav className="navbar navbar-expand-lg fixed-top bg-body-tertiary">
-                <div className="container">
-                    <Link to="/" className="navbar-brand d-flex">
-                        <FaApple />
-                    </Link>
-                    <button className="d-lg-none ms-2" onClick={onBagClick} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit' }} aria-label="Toggle shopping bag small-screen">
-                        <BsBag className="fs-6" />
-                    </button>
-                    <button className="navbar-toggler" type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar"
-                        aria-controls="offcanvasNavbar">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-            
-                    <div className="offcanvas offcanvas-start" tabIndex="-1" id="offcanvasNavbar">
-                        <div className="offcanvas-header">
-                            <h5 className="offcanvas-title">Menu</h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
-                        </div>
 
-                        <div className="offcanvas-body">
-                            <ul className="navbar-nav align-items-center justify-content-center w-100 justify-content-sm-start flex-grow-1 pe-3">
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/store">Store</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Mac">Mac</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/iPad">iPad</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/iPhone">iPhone</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Watch">Watch</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Vision">Vision</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Airpods</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">TV & Home</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Entertainment</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Accessories</Link>
-                                </li>
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/Airpods">Support</Link>
-                                </li>
+  // بستن offcanvas به‌صورت SPA-friendly
+  const closeOffcanvas = () => {
+    const el = document.getElementById("offcanvasNavbar");
+    if (!el) return;
 
-                                <li className="nav-item text-md-start mx-auto">
-                                    <Link className="nav-link" data-bs-dismiss="offcanvas"  to="/search">
-                                        <IoIosSearch className="fs-5" />
-                                    </Link>
-                                </li>
+    const instance =
+      Offcanvas.getInstance(el) || new Offcanvas(el);
 
-                                <li className="nav-item text-md-start mx-auto d-none d-lg-block">
-                                    <button onClick={onBagClick} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit' }} aria-label="Toggle shopping bag">
-                                        <BsBag className="fs-6" />
-                                    </button>
-                                </li>
+    instance.hide();
+  };
 
-                            </ul>
-                        </div>
-                    </div>
+  // لینک مخصوص offcanvas
+  const OffcanvasLink = ({ to, children, className = "" }) => (
+    <Link
+      to={to}
+      className={`nav-link ${className}`}
+      onClick={closeOffcanvas}
+    >
+      {children}
+    </Link>
+  );
 
-                </div>
-            </nav>
+  return (
+    <nav className="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+      <div className="container">
 
+        {/* Logo */}
+        <Link to="/" className="navbar-brand d-flex">
+          <FaApple />
+        </Link>
+
+        {/* Bag (mobile) */}
+        <button
+          className="d-lg-none ms-2"
+          onClick={onBagClick}
+          style={{ background: "none", border: "none", cursor: "pointer" }}
+          aria-label="Toggle shopping bag small-screen"
+        >
+          <BsBag className="fs-6" />
+        </button>
+
+        {/* Toggler */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        {/* Offcanvas */}
+        <div
+          className="offcanvas offcanvas-start"
+          tabIndex="-1"
+          id="offcanvasNavbar"
+        >
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title">Menu</h5>
+            <button
+              type="button"
+              className="btn-close"
+              onClick={closeOffcanvas}
+            />
+          </div>
+
+          <div className="offcanvas-body">
+            <ul className="navbar-nav align-items-center w-100 flex-grow-1 pe-3">
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/store">Store</OffcanvasLink>
+              </li>
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/mac">Mac</OffcanvasLink>
+              </li>
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/ipad">iPad</OffcanvasLink>
+              </li>
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/iphone">iPhone</OffcanvasLink>
+              </li>
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/watch">Watch</OffcanvasLink>
+              </li>
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/vision">Vision</OffcanvasLink>
+              </li>
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/airpods">AirPods</OffcanvasLink>
+              </li>
+
+              <li className="nav-item mx-auto">
+                <OffcanvasLink to="/search">
+                  <IoIosSearch className="fs-5" />
+                </OffcanvasLink>
+              </li>
+
+              {/* Bag (desktop) */}
+              <li className="nav-item mx-auto d-none d-lg-block">
+                <button
+                  onClick={onBagClick}
+                  style={{ background: "none", border: "none", cursor: "pointer" }}
+                  aria-label="Toggle shopping bag"
+                >
+                  <BsBag className="fs-6" />
+                </button>
+              </li>
+
+            </ul>
+          </div>
         </div>
-    )
+
+      </div>
+    </nav>
+  );
 }
+
