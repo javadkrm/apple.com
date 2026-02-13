@@ -1,13 +1,12 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './MainProducts.css'
-import productsContext from '../../Contexts/productsContext'
+import { MainProductsData } from '../../Datas'
 
 export default function MainProducts() {
-    const { mainProducts } = useContext(productsContext)
     return (
         <>
-            {mainProducts.map(product => (
+            {MainProductsData.map(product => (
                 <Link
                     key={product.id}
                     to={`/store/${product.id}`}

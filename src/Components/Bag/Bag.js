@@ -1,9 +1,16 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import './Bag.css'
-import productsContext from '../../Contexts/productsContext'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeCart } from '../../store/slices/cartSlice'
 
-export default function Bag({ isOpen = false, onClose = () => { } }) {
-    const { userBagDatas, setUserBagDatas } = useContext(productsContext)
+export default function Bag({ isOpen = false, onClose = () => {} }) {
+
+    const cartItems = useSelector((state) => state.cartItems.cart)
+
+    console.log(isOpen);
+    
+    const dispatch = useDispatch()
+
     useEffect(() => {
         if (!isOpen) return
         const onKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -11,18 +18,12 @@ export default function Bag({ isOpen = false, onClose = () => { } }) {
         return () => window.removeEventListener('keydown', onKey)
     }, [isOpen, onClose])
 
-    const removeFromBag = (item) => {
-        setUserBagDatas(prevBag =>
-            prevBag.filter(product => product.id !== item.id)
-        )
-    }
-
-
-    const totalPrice = userBagDatas.reduce((sum, item) => {
+    const totalPrice = cartItems.reduce((sum, item) => {
         const price = Number(item.price) || 0
         const count = Number(item.count) || 0
         return sum + price * count
     }, 0)
+
     return (
         <div>
             {isOpen && <div className="bagBackdrop" onClick={onClose} />}
@@ -35,8 +36,8 @@ export default function Bag({ isOpen = false, onClose = () => { } }) {
                     {`Total: $${totalPrice.toFixed(2)}`}
                 </p>
                 <div className='bagItemsContainer px-3'>
-                    {userBagDatas.length === 0 ? (<p>Your Bag Is Empty</p>) : (
-                        userBagDatas.map(item => (
+                    {cartItems.length === 0 ? (<p>Your Bag Is Empty</p>) : (
+                        cartItems.map(item => (
                             <div
                                 key={item.id}
                                 className="bagItem d-flex justify-content-between align-items-center mb-3 p-2"
@@ -53,9 +54,8 @@ export default function Bag({ isOpen = false, onClose = () => { } }) {
                                         </div>
                                     </div>
                                 </div>
-                                <button
-                                    onClick={() => removeFromBag(item)}
-                                    className="btn btn-danger me-3"
+                                <button className="btn btn-danger me-3"
+                                    onClick={() => {dispatch(removeCart(item.id))}}
                                 >
                                     Remove
                                 </button>

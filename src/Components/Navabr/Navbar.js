@@ -7,9 +7,8 @@ import { FaApple } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
 import { BsBag } from "react-icons/bs";
 
-export default function Navbar({ onBagClick }) {
+export default function Navbar({onBagClick}) {
 
-  // بستن offcanvas به‌صورت SPA-friendly
   const closeOffcanvas = () => {
     const el = document.getElementById("offcanvasNavbar");
     if (!el) return;
@@ -20,7 +19,6 @@ export default function Navbar({ onBagClick }) {
     instance.hide();
   };
 
-  // لینک مخصوص offcanvas
   const OffcanvasLink = ({ to, children, className = "" }) => (
     <Link
       to={to}
@@ -34,23 +32,19 @@ export default function Navbar({ onBagClick }) {
   return (
     <nav className="navbar navbar-expand-lg fixed-top bg-body-tertiary">
       <div className="container">
-
-        {/* Logo */}
         <Link to="/" className="navbar-brand d-flex">
           <FaApple />
         </Link>
 
-        {/* Bag (mobile) */}
         <button
           className="d-lg-none ms-2"
-          onClick={onBagClick}
           style={{ background: "none", border: "none", cursor: "pointer" }}
           aria-label="Toggle shopping bag small-screen"
+          onClick={onBagClick}
         >
           <BsBag className="fs-6" />
         </button>
 
-        {/* Toggler */}
         <button
           className="navbar-toggler"
           type="button"
@@ -60,8 +54,6 @@ export default function Navbar({ onBagClick }) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-
-        {/* Offcanvas */}
         <div
           className="offcanvas offcanvas-start"
           tabIndex="-1"
@@ -112,13 +104,11 @@ export default function Navbar({ onBagClick }) {
                   <IoIosSearch className="fs-5" />
                 </OffcanvasLink>
               </li>
-
-              {/* Bag (desktop) */}
               <li className="nav-item mx-auto d-none d-lg-block">
                 <button
-                  onClick={onBagClick}
                   style={{ background: "none", border: "none", cursor: "pointer" }}
                   aria-label="Toggle shopping bag"
+                  onClick={onBagClick}
                 >
                   <BsBag className="fs-6" />
                 </button>

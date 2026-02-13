@@ -1,36 +1,17 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
-import productsContext from '../../Contexts/productsContext'
 import './MainPro.css'
+import { MainProductsData } from '../../Datas'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../store/slices/cartSlice'
 
 export default function MainPro() {
 
-  const { mainProducts } = useContext(productsContext)
   const { id } = useParams()
-  const product = mainProducts.find(prod => prod.id === parseInt(id))
-  const { userBagDatas, setUserBagDatas } = useContext(productsContext)
+  const product = MainProductsData.find(prod => prod.id === parseInt(id))
 
-  const addToUserBag = (pro) => {
-    let isInUserBag = userBagDatas.some(product => product.id === pro.id)
+  const dispatch = useDispatch()
 
-    if (!isInUserBag) {
-      let newProductInfo = {
-        id: pro.id,
-        title: pro.title,
-        img: pro.img,
-        price: pro.price,
-        count: 1
-      }
-      setUserBagDatas([...userBagDatas, newProductInfo])
-    } else {
-      const updatedBag = userBagDatas.map(product =>
-        product.id === pro.id
-          ? { ...product, count: product.count + 1 }
-          : product
-      )
-      setUserBagDatas(updatedBag)
-    }
-  }
 
   return (
     <div>
@@ -49,8 +30,7 @@ export default function MainPro() {
           <span className="MainProPrice mb-4 fw-semibold fs-3">{product.price}$</span>
 
           <button onClick={() => {
-            addToUserBag(product)
-            
+            dispatch(addToCart(product))
           }} className="MainProAddToCartBtn btn btn-primary rounded-pill py-2 px-4">
             Add to Cart
           </button>
