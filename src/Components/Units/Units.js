@@ -1,15 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './Units.css';
-import productsContext from '../../Contexts/productsContext';
 import { Link } from 'react-router-dom';
+import unitsDatas, { productTypes } from '../../Datas';
 
 export default function Units() {
-  const { units, anotherUnits } = useContext(productsContext);
 
   return (
     <>
 
-      {units.map(unit => (
+      {unitsDatas.map(unit => (
         <div className='unitsContainer mb-3' key={unit.id}>
           <div className='unit'>
             <h1 className='unit-title'>{unit.title}</h1>
@@ -36,7 +35,7 @@ export default function Units() {
 
       <div className='secondUnitsContainer row p-0 m-0 w-100 mt-3'>
 
-        {anotherUnits.map(unit => (
+        {productTypes.map(unit => (
           <div className='col-12 col-lg-6 mb-3' key={unit.id}>
             <div className={`unit smallUnit ${unit.classname}`}>
 

@@ -1,20 +1,16 @@
-import React, { useEffect, useRef, useState, useContext } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import "./ScrollSlider.css";
-import productsContext from "../../Contexts/productsContext";
+import { scrollSliderDatas } from "../../Datas";
 
 export default function AutoScrollSlider() {
-    const { scrollDatas } = useContext(productsContext);
 
     const sliderRef = useRef(null);
-    // hovered index to control blur of other items
     const [hoveredIndex, setHoveredIndex] = useState(null);
-
-    // pixels per second speed used inside RAF loop
-    const speedRef = useRef(60); // normal speed: 60px/s
+    const speedRef = useRef(60); 
     const lastTimeRef = useRef(null);
 
-    const list = [...scrollDatas, ...scrollDatas];
+    const list = [...scrollSliderDatas, ...scrollSliderDatas];
 
     useEffect(() => {
         const slider = sliderRef.current;
@@ -27,17 +23,12 @@ export default function AutoScrollSlider() {
             if (!lastTimeRef.current) lastTimeRef.current = time;
             const delta = time - lastTimeRef.current;
             lastTimeRef.current = time;
-
-            // if content isn't scrollable, still keep RAF running
-            const moveBy = (speedRef.current * delta) / 1000; // pixels to move this frame
+            const moveBy = (speedRef.current * delta) / 1000;
 
             if (slider.scrollWidth > slider.clientWidth) {
                 slider.scrollLeft += moveBy;
-
-                // seamless loop when reaching half (duplicated list)
                 const half = slider.scrollWidth / 2;
                 if (slider.scrollLeft >= half) {
-                    // subtract half to keep the continuous scroll position
                     slider.scrollLeft -= half;
                 }
             }
@@ -52,18 +43,18 @@ export default function AutoScrollSlider() {
 
     const handleItemEnter = (originalIdx) => {
         setHoveredIndex(originalIdx);
-        speedRef.current = 12; // slow down to 12px/s
+        speedRef.current = 12;
     };
 
     const handleItemLeave = () => {
         setHoveredIndex(null);
-        speedRef.current = 60; // resume normal speed
+        speedRef.current = 60;
     };
 
     return (
         <div className="sliderWrapper" ref={sliderRef}>
             {list.map((item, idx) => {
-                const originalIdx = idx < scrollDatas.length ? idx : idx - scrollDatas.length;
+                const originalIdx = idx < scrollSliderDatas.length ? idx : idx - scrollSliderDatas.length;
                 const isBlurred = hoveredIndex !== null && hoveredIndex !== originalIdx;
 
                 return (

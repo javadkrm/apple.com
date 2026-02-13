@@ -1,10 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Caruser.css'
-import productsContext from '../../Contexts/productsContext'
 import { Link } from 'react-router-dom'
+import { moviesDatas } from '../../Datas'
 
 export default function Caruser() {
-    const { movies } = useContext(productsContext)
+    const  movies  = moviesDatas
     const [activeIndex, setActiveIndex] = useState(0)
 
     useEffect(() => {

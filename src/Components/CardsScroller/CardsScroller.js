@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import './CardsScroller.css'
 import { Link } from 'react-router-dom'
-import productsContext from '../../Contexts/productsContext'
+import { scrollCardDatas } from '../../Datas'
 
 
 export default function CardsScroller() {
-    const { scrollCards } = useContext(productsContext)
+    const  scrollCards  = scrollCardDatas
     return (
         <>
             {

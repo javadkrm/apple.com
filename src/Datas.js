@@ -5,7 +5,7 @@ let unitsDatas = [
     { id: 3, title: 'AirPods Pro 3', img: `${PUBLIC}/images/airpods-pro-3.jpg`, desc: 'The Worlds best in-ear Active Noice Cancellation', firstBtnText: 'Learn More', secondBtnText: 'Buy' },
 ]
 
-let anotherUnitsDatas = [
+let productTypes = [
     { id: 1, title: 'iPad', img: `${PUBLIC}/images/ipad.jpg`, desc: 'Now superCharged by the M3 chip', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'blueBg' },
     { id: 2, title: 'Watch series 11', img: `${PUBLIC}/images/watch.jpg`, desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
     { id: 3, title: 'iPad', img: `${PUBLIC}/images/ipads.jpg`, desc: 'The ultimate way to watch your health', firstBtnText: 'Learn More', secondBtnText: 'Buy', classname: 'main-white' },
@@ -78,7 +78,15 @@ let macPageProducts = [
 
 export default unitsDatas
 
-export { anotherUnitsDatas, moviesDatas, scrollSliderDatas, productsCategoryData, scrollCardDatas, MainProductsData, macPageProducts}
+export {
+    productTypes,
+    moviesDatas,
+    scrollSliderDatas,
+    productsCategoryData,
+    scrollCardDatas,
+    MainProductsData,
+    macPageProducts
+}
 
 
 // {id: 1, title: 'Give Something Special', img: 'images/apple-logo.jpg', desc: 'Find what they have been waiting for all year', firstBtnText:'Shop gifts',},

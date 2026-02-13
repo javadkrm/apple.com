@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './ProductsCategory.css'
-import productsContext from '../../Contexts/productsContext'
+import { productsCategoryData } from '../../Datas'
 
 export default function ProductsCategory() {
 
-    const { categoryDatas } = useContext(productsContext)
+    const categories  = productsCategoryData
     return (
         <>
-            {categoryDatas.map(category => (
+            {categories.map(category => (
                 <Link key={category.id} className='text-decoration-none' to={`/shop/${category.id}`}>
                     <div className='categoryItem'>
                         <div className='categorImage'>
