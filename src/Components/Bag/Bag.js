@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react'
 import './Bag.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { removeCart } from '../../store/slices/cartSlice'
+import { decreaseCart, increaseCount, removeCart } from '../../store/slices/cartSlice'
 
-export default function Bag({ isOpen = false, onClose = () => {} }) {
+export default function Bag({ isOpen = false, onClose = () => { } }) {
 
     const cartItems = useSelector((state) => state.cartItems.cart)
 
     console.log(isOpen);
-    
+
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -54,11 +54,27 @@ export default function Bag({ isOpen = false, onClose = () => {} }) {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="btn btn-danger me-3"
-                                    onClick={() => {dispatch(removeCart(item.id))}}
-                                >
-                                    Remove
-                                </button>
+                                <div className='btns d-flex align-items-center'>
+                                    <div className='d-flex me-5'>
+                                        <button 
+                                        className='btn btn-success me-2'
+                                        onClick={() => {
+                                            dispatch(increaseCount(item.id))                                  
+                                        }}
+                                        >+</button>
+                                        <button 
+                                        className='btn btn-warning'
+                                        onClick={() => {
+                                            dispatch(decreaseCart(item.id))
+                                        }}
+                                        >-</button>
+                                    </div>
+                                    <button className="btn btn-danger me-3"
+                                        onClick={() => { dispatch(removeCart(item.id)) }}
+                                    >
+                                        Remove
+                                    </button>
+                                </div>
                             </div>
 
                         ))
