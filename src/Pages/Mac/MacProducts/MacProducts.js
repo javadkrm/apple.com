@@ -3,6 +3,7 @@ import './MacProducts.css'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../../store/slices/cartSlice'
 import { macPageProducts } from '../../../Datas'
+import toast from 'react-hot-toast'
 
 export default function MacProducts({ selectedCategory = 'All Products' }) {
 
@@ -20,8 +21,9 @@ export default function MacProducts({ selectedCategory = 'All Products' }) {
                         <span className='macProductPrice fw-semibold'>{product.price}$</span>
                         <div className='productButtons d-flex gap-2 mt-3'>
                             <button className='btn btn-primary rounded-pill'>Learn More</button>
-                            <button className='btn btn-outline-primary rounded-pill' onClick={() => {
+                            <button className='btn btn-outline-primary rounded-pill add-btn' onClick={() => {
                                 dispatch(addToCart(product))
+                                toast.success('Added To Carts ')
                             }}>Buy</button>
                         </div>
                     </div>

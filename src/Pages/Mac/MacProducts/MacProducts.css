@@ -62,6 +62,11 @@
 	color: #0a84ff;
 }
 
+.productButtons .add-btn:hover {
+	background: linear-gradient(180deg, #0a84ff, #005bb5);
+	color: #fff;
+}
+
 /* Mobile adjustments */
 @media (max-width: 768px) {
 	.macProductCard { padding: 1rem; }

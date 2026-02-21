@@ -4,6 +4,7 @@ import './MainPro.css'
 import { MainProductsData } from '../../Datas'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../store/slices/cartSlice'
+import toast from 'react-hot-toast'
 
 export default function MainPro() {
 
@@ -29,9 +30,12 @@ export default function MainPro() {
 
           <span className="MainProPrice mb-4 fw-semibold fs-3">{product.price}$</span>
 
-          <button onClick={() => {
-            dispatch(addToCart(product))
-          }} className="MainProAddToCartBtn btn btn-primary rounded-pill py-2 px-4">
+          <button
+            className="MainProAddToCartBtn btn btn-primary rounded-pill py-2 px-4"
+            onClick={() => {
+              dispatch(addToCart(product))
+              toast.success('Added To Cart')
+            }} >
             Add to Cart
           </button>
 

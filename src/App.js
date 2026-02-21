@@ -5,6 +5,7 @@ import Navbar from './Components/Navabr/Navbar';
 import routes from './routes';
 import Footer from './Components/Footer/Footer';
 import Bag from './Components/Bag/Bag';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   let router = useRoutes(routes)
@@ -18,6 +19,14 @@ function App() {
       />
       {router}
       <Footer />
+      <Toaster position='top-right'
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: 'linear-gradient(180deg, #0a84ff, #005bb5)',
+            color: "#fff",
+          },
+        }} />
     </div>
   );
 }

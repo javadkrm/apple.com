@@ -14,6 +14,21 @@
 .MainProAddToCartBtn {
     width: 140px;
     background: linear-gradient(180deg, #0a84ff, #005bb5);
+    transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+.MainProAddToCartBtn:hover {
+    background: #fff ;
+    color: #0a84ff;
+    transform: scaleY(3px);
+    -webkit-transform: scaleY(3px);
+    -moz-transform: scaleY(3px);
+    -ms-transform: scaleY(3px);
+    -o-transform: scaleY(3px);
 }
 
 @media (max-width: 600px) {
